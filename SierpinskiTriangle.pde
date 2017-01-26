@@ -1,3 +1,7 @@
+
+int color1 = 0;
+int color2 = 204;
+int color3 = 204;
 public void setup()
 {
 	background(0);
@@ -5,11 +9,18 @@ public void setup()
 }
 public void draw()
 {
-	sierpinski(500,500,150);
+	background(0);
+	fill(color1, color2, color3);
+	sierpinski(20,850,mouseX);
 }
 public void mouseDragged()//optional
 {
-
+	if (mouseX > 40)
+	{
+		color1 = (int)(Math.random()*255);
+		color2 = (int)(Math.random()*255);
+		color3 = (int)(Math.random()*255);
+	}
 }
 public void sierpinski(int x, int y, int len) 
 {
