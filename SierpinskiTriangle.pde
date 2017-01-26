@@ -10,7 +10,7 @@ public void setup()
 public void draw()
 {
 	background(0);
-	fill(color1, color2, color3);
+	stroke(color1, color2, color3);
 	sierpinski(20,850,mouseX);
 }
 public void mouseDragged()//optional
@@ -30,6 +30,7 @@ public void sierpinski(int x, int y, int len)
 	}
 	else 
 	{
+		noFill();
 		sierpinski(x,y,len/2);
 		sierpinski(x+len/2, y, len/2);
 		sierpinski(x+len/4, y-len/2, len/2);
